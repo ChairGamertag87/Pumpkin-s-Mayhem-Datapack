@@ -1,0 +1,16 @@
+{
+    "pack": {
+        "pack_format": 81,
+        "description": "Datapack by ChairGamertag87"
+    },
+
+    "filter": {
+        "block": [
+            {
+                "namespace": "minecraft",
+                "path": "advancement/.*"
+            }
+        ]
+    }
+
+}
