@@ -1,4 +1,4 @@
-execute as @a[scores={use_warped_fungus=1..}] at @s run function game:pumpkin/pumpkin_launch
+execute as @a[scores={use_warped_fungus=1..}] at @s run function game:pumpkin/switch
 
 scoreboard players reset @a use_warped_fungus
 
