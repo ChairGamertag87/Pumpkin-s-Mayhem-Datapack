@@ -19,4 +19,17 @@ team modify blue color blue
 team modify red friendlyFire false
 team modify blue friendlyFire false
 
+#Gamerules
+gamerule doDaylightCycle false
+gamerule spawnRadius 0
+gamerule doWeatherCycle false
+gamerule doInsomnia false
+gamerule doMobSpawning false
+gamerule doVinesSpread false
+gamerule doImmediateRespawn true
+gamerule announceAdvancements false
+gamerule commandBlockOutput false
+gamerule showDeathMessages false
+gamerule spawnChunkRadius 0
+
 forceload add 0 0
