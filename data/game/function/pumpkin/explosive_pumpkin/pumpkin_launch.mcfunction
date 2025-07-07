@@ -19,4 +19,5 @@ tag @e[type=minecraft:armor_stand,tag=temp_snowball_pumpkin] remove temp_snowbal
 
 kill @e[type=marker, tag = pumpkin]
 
+
 execute at @s run playsound minecraft:entity.snowball.throw master @a ~ ~ ~ 1 1.5
