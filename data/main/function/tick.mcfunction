@@ -1,1 +1,2 @@
 function game:pumpkin/tick_pumpkin
+function menu:tick_selector

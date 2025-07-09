@@ -1,0 +1,3 @@
+item replace entity @a hotbar.8 with warped_fungus_on_a_stick[item_name={"color":"gray","italic":false,"text":"Spectate"},custom_data={spec_selector:1b},minecraft:item_model="minecraft:white_pumpkin"] 1
+item replace entity @a hotbar.7 with warped_fungus_on_a_stick[item_name={"color":"blue","italic":false,"text":"Join blue team"},custom_data={blue_selector:1b},minecraft:item_model="minecraft:blue_pumpkin"] 1
+item replace entity @a hotbar.6 with warped_fungus_on_a_stick[item_name={"color":"red","italic":false,"text":"Join red team"},custom_data={red_selector:1b},minecraft:item_model="minecraft:red_pumpkin"] 1
