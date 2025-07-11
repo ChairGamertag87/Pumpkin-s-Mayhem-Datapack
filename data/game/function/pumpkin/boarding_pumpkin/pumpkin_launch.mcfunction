@@ -16,7 +16,6 @@ summon minecraft:item_display ^ ^1 ^1 {Tags:["pumpkin"],NoGravity:1b,billboard:"
 execute as @e[type=minecraft:armor_stand,tag=temp_snowball_pumpkin,sort=nearest,limit=1] at @s run ride @e[type=item_display,tag=pumpkin,sort=nearest,limit=1] mount @s
 ride @s mount @e[type=item_display,tag=pumpkin,sort=nearest,limit=1]
 
-tag @e[type=minecraft:armor_stand,tag=temp_snowball_pumpkin] remove temp_snowball_pumpkin
 
 kill @e[type=marker, tag = pumpkin]
 

@@ -3,7 +3,12 @@ scoreboard objectives add use_warped_fungus minecraft.used:minecraft.warped_fung
 scoreboard objectives add maths dummy
 scoreboard objectives add game dummy
 scoreboard objectives add kills playerKillCount
-
+scoreboard objectives add lastX dummy
+scoreboard objectives add lastY dummy
+scoreboard objectives add lastZ dummy
+scoreboard objectives add currentX dummy
+scoreboard objectives add currentY dummy
+scoreboard objectives add currentZ dummy
 #Setup players
 scoreboard players set .x maths 0
 scoreboard players set .y maths 0
