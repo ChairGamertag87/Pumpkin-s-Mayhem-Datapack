@@ -9,6 +9,11 @@ scoreboard objectives add lastZ dummy
 scoreboard objectives add currentX dummy
 scoreboard objectives add currentY dummy
 scoreboard objectives add currentZ dummy
+scoreboard objectives add hp.use minecraft.used:minecraft.carrot_on_a_stick
+scoreboard objectives add hp.last_use dummy
+scoreboard objectives add hp.state dummy
+scoreboard objectives add hp.time dummy
+
 #Setup players
 scoreboard players set .x maths 0
 scoreboard players set .y maths 0

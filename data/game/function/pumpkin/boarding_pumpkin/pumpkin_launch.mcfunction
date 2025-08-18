@@ -1,6 +1,6 @@
 execute positioned -0.01 0.2 -0.01 run summon minecraft:marker ^ ^ ^1 {Tags:["pumpkin"]}
 
-execute positioned ~ ~ ~ run summon minecraft:armor_stand ^ ^1 ^1 {Tags:["temp_snowball_pumpkin"],Motion:[0.0,0.0,0.0],Invulnerable:1b,Small:1b,Invisible:1b}
+execute positioned ~ ~ ~ run summon minecraft:armor_stand ^ ^1 ^1 {Tags:["temp_snowball_pumpkin","bpumpkin"],Motion:[0.0,0.0,0.0],Invulnerable:1b,Small:1b,Invisible:1b}
 
 execute positioned 0 0 0 store result score .x maths run data get entity @n[type=minecraft:marker,tag=pumpkin] Pos[0] 30000
 execute positioned 0 0 0 store result score .y maths run data get entity @n[type=minecraft:marker,tag=pumpkin] Pos[1] 30000
