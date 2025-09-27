@@ -1,0 +1,1 @@
+give @p warped_fungus_on_a_stick[custom_name={"bold":true,"color":"yellow","italic":false,"text":"Thunder Pumpkin"},lore=[{"color":"yellow","text":"A pumpkin that create thunder storm when it touches something.","italic":false}],custom_data={tpumpkin:1b},enchantment_glint_override=true] 1
