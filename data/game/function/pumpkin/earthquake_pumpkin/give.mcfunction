@@ -1,0 +1,1 @@
+give @p warped_fungus_on_a_stick[custom_name={"bold":true,"color":"#7a3838","italic":false,"text":"Earthquake pumpkin"},lore=[{"color":"#7a3838","text":"A pumpkin that create an earthquake when it touches something.","italic":false}],custom_data={eqpumpkin:1b},enchantment_glint_override=true] 1
