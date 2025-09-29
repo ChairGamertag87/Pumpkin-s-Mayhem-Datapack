@@ -9,4 +9,4 @@ execute if entity @s[tag=tpumpkin] run say Thunder Pumpkin
 execute if entity @s[tag=brpumpkin] run say Bridging Pumpkin
 
 kill @s
-kill @e[type=item_display, tag=pumpkin, distance=..1]
+kill @e[type=item_display, tag=pumpkin, tag=!hpumpkin, distance=..1]

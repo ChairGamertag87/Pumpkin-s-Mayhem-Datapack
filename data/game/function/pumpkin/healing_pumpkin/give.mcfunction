@@ -1,0 +1,1 @@
+give @p warped_fungus_on_a_stick[custom_name={"bold":true,"color":"#ff00bf","italic":false,"text":"Healing Pumpkin"},lore=[{"color":"#ff00bf","text":"A pumpkin that heal players around it.","italic":false}],custom_data={hpumpkin:1b},enchantment_glint_override=true] 1
