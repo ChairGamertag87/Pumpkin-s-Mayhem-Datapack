@@ -1,0 +1,1 @@
+give @p warped_fungus_on_a_stick[custom_name={"bold":true,"color":"#81ff76","italic":false,"text":"Stinky Pumpkin"},lore=[{"color":"#81ff76","text":"A pumpkin that creates a poisonous cloud when it touches something.","italic":false}],custom_data={spumpkin:1b},enchantment_glint_override=true] 1
