@@ -14,6 +14,10 @@ summon minecraft:item_display ^ ^1 ^1 {Tags:["pumpkin","hpumpkin"],NoGravity:1b,
 
 execute as @e[type=minecraft:armor_stand,tag=temp_snowball_pumpkin,sort=nearest,limit=1] at @s run ride @e[type=item_display,tag=pumpkin,sort=nearest,limit=1] mount @s
 
+#Store launcher team on the armor_stand
+execute if entity @s[team=red] run tag @n[type=minecraft:armor_stand,tag=temp_snowball_pumpkin] add red_team
+execute if entity @s[team=blue] run tag @n[type=minecraft:armor_stand,tag=temp_snowball_pumpkin] add blue_team
+
 kill @e[type=marker, tag = pumpkin]
 
 execute at @s run playsound minecraft:entity.snowball.throw master @a ~ ~ ~ 1 1.5
