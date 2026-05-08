@@ -1,85 +1,68 @@
 scoreboard players add @s effect_timer 1
 
-# --- Particles every tick (blizzard growing) ---
-particle minecraft:snowflake ~ ~1 ~ 2 2 2 0.05 8
-particle minecraft:cloud ~ ~0.5 ~ 1 0.5 1 0.02 3
+# --- Blizzard particles every tick ---
+particle minecraft:snowflake ~ ~1 ~ 3 2 3 0.05 10
+particle minecraft:cloud ~ ~0.5 ~ 2 1 2 0.02 4
 
-# === Wave 1: Center snow (ticks 1-6) ===
-execute if score @s effect_timer matches 1 run setblock ~ ~ ~ snow keep
-execute if score @s effect_timer matches 2 run setblock ~1 ~ ~ snow keep
-execute if score @s effect_timer matches 2 run setblock ~-1 ~ ~ snow keep
-execute if score @s effect_timer matches 3 run setblock ~ ~ ~1 snow keep
-execute if score @s effect_timer matches 3 run setblock ~ ~ ~-1 snow keep
-execute if score @s effect_timer matches 4 run setblock ~1 ~ ~1 snow keep
-execute if score @s effect_timer matches 4 run setblock ~-1 ~ ~-1 snow keep
-execute if score @s effect_timer matches 5 run setblock ~-1 ~ ~1 snow keep
-execute if score @s effect_timer matches 5 run setblock ~1 ~ ~-1 snow keep
-execute if score @s effect_timer matches 6 run setblock ~ ~1 ~ snow keep
+# ============================================
+# RANDOM BLOCK 1
+# ============================================
+summon marker ~ ~ ~ {Tags:["frost_spread"]}
 
-# === Wave 2: Ice ring (ticks 8-15) ===
-execute if score @s effect_timer matches 8 run setblock ~2 ~ ~ ice keep
-execute if score @s effect_timer matches 8 run setblock ~-2 ~ ~ ice keep
-execute if score @s effect_timer matches 9 run setblock ~ ~ ~2 ice keep
-execute if score @s effect_timer matches 9 run setblock ~ ~ ~-2 ice keep
-execute if score @s effect_timer matches 10 run setblock ~2 ~ ~1 ice keep
-execute if score @s effect_timer matches 10 run setblock ~-2 ~ ~-1 ice keep
-execute if score @s effect_timer matches 11 run setblock ~1 ~ ~2 ice keep
-execute if score @s effect_timer matches 11 run setblock ~-1 ~ ~-2 ice keep
-execute if score @s effect_timer matches 12 run setblock ~2 ~ ~-1 ice keep
-execute if score @s effect_timer matches 12 run setblock ~-2 ~ ~1 ice keep
-execute if score @s effect_timer matches 13 run setblock ~-1 ~ ~2 ice keep
-execute if score @s effect_timer matches 13 run setblock ~1 ~ ~-2 ice keep
-execute if score @s effect_timer matches 14 run setblock ~2 ~ ~2 ice keep
-execute if score @s effect_timer matches 14 run setblock ~-2 ~ ~-2 ice keep
-execute if score @s effect_timer matches 15 run setblock ~2 ~ ~-2 ice keep
-execute if score @s effect_timer matches 15 run setblock ~-2 ~ ~2 ice keep
-execute if score @s effect_timer matches 10 run playsound minecraft:block.glass.break master @a ~ ~ ~ 0.6 1.8
+# Radius grows over time
+execute if score @s effect_timer matches 1..12 run spreadplayers ~ ~ 0 2 false @n[type=marker,tag=frost_spread]
+execute if score @s effect_timer matches 13..25 run spreadplayers ~ ~ 0 4 false @n[type=marker,tag=frost_spread]
+execute if score @s effect_timer matches 26..40 run spreadplayers ~ ~ 0 5 false @n[type=marker,tag=frost_spread]
 
-# === Wave 3: Packed ice (ticks 17-24) ===
-execute if score @s effect_timer matches 17 run setblock ~3 ~ ~ packed_ice keep
-execute if score @s effect_timer matches 17 run setblock ~-3 ~ ~ packed_ice keep
-execute if score @s effect_timer matches 18 run setblock ~ ~ ~3 packed_ice keep
-execute if score @s effect_timer matches 18 run setblock ~ ~ ~-3 packed_ice keep
-execute if score @s effect_timer matches 19 run setblock ~3 ~ ~1 packed_ice keep
-execute if score @s effect_timer matches 19 run setblock ~-3 ~ ~-1 packed_ice keep
-execute if score @s effect_timer matches 20 run setblock ~1 ~ ~3 packed_ice keep
-execute if score @s effect_timer matches 20 run setblock ~-1 ~ ~-3 packed_ice keep
-execute if score @s effect_timer matches 21 run setblock ~3 ~ ~-1 packed_ice keep
-execute if score @s effect_timer matches 21 run setblock ~-3 ~ ~1 packed_ice keep
-execute if score @s effect_timer matches 22 run setblock ~-1 ~ ~3 packed_ice keep
-execute if score @s effect_timer matches 22 run setblock ~1 ~ ~-3 packed_ice keep
-execute if score @s effect_timer matches 23 run setblock ~3 ~ ~2 packed_ice keep
-execute if score @s effect_timer matches 23 run setblock ~-3 ~ ~-2 packed_ice keep
-execute if score @s effect_timer matches 24 run setblock ~2 ~ ~3 packed_ice keep
-execute if score @s effect_timer matches 24 run setblock ~-2 ~ ~-3 packed_ice keep
-execute if score @s effect_timer matches 20 run playsound minecraft:block.glass.break master @a ~ ~ ~ 0.4 2.0
+# Snow on top + replace ground with ice variants
+execute if score @s effect_timer matches 1..12 at @n[type=marker,tag=frost_spread] run setblock ~ ~ ~ snow
+execute if score @s effect_timer matches 1..12 at @n[type=marker,tag=frost_spread] run setblock ~ ~-1 ~ snow_block
+execute if score @s effect_timer matches 13..25 at @n[type=marker,tag=frost_spread] run setblock ~ ~-1 ~ ice
+execute if score @s effect_timer matches 13..25 at @n[type=marker,tag=frost_spread] run setblock ~ ~ ~ snow
+execute if score @s effect_timer matches 26..35 at @n[type=marker,tag=frost_spread] run setblock ~ ~-1 ~ packed_ice
+execute if score @s effect_timer matches 36..40 at @n[type=marker,tag=frost_spread] run setblock ~ ~-1 ~ blue_ice
 
-# === Wave 4: Blue ice outer rim (ticks 26-35) ===
-execute if score @s effect_timer matches 26 run setblock ~4 ~ ~ blue_ice keep
-execute if score @s effect_timer matches 26 run setblock ~-4 ~ ~ blue_ice keep
-execute if score @s effect_timer matches 27 run setblock ~ ~ ~4 blue_ice keep
-execute if score @s effect_timer matches 27 run setblock ~ ~ ~-4 blue_ice keep
-execute if score @s effect_timer matches 28 run setblock ~3 ~ ~3 blue_ice keep
-execute if score @s effect_timer matches 28 run setblock ~-3 ~ ~-3 blue_ice keep
-execute if score @s effect_timer matches 29 run setblock ~3 ~ ~-3 blue_ice keep
-execute if score @s effect_timer matches 29 run setblock ~-3 ~ ~3 blue_ice keep
-execute if score @s effect_timer matches 30 run setblock ~4 ~ ~1 blue_ice keep
-execute if score @s effect_timer matches 30 run setblock ~-4 ~ ~-1 blue_ice keep
-execute if score @s effect_timer matches 31 run setblock ~1 ~ ~4 blue_ice keep
-execute if score @s effect_timer matches 31 run setblock ~-1 ~ ~-4 blue_ice keep
-execute if score @s effect_timer matches 32 run setblock ~4 ~ ~-1 blue_ice keep
-execute if score @s effect_timer matches 32 run setblock ~-4 ~ ~1 blue_ice keep
-execute if score @s effect_timer matches 33 run setblock ~-1 ~ ~4 blue_ice keep
-execute if score @s effect_timer matches 33 run setblock ~1 ~ ~-4 blue_ice keep
-execute if score @s effect_timer matches 34 run setblock ~4 ~ ~2 blue_ice keep
-execute if score @s effect_timer matches 34 run setblock ~-4 ~ ~-2 blue_ice keep
-execute if score @s effect_timer matches 35 run setblock ~2 ~ ~4 blue_ice keep
-execute if score @s effect_timer matches 35 run setblock ~-2 ~ ~-4 blue_ice keep
-execute if score @s effect_timer matches 30 run playsound minecraft:block.powder_snow.step master @a ~ ~ ~ 1 0.5
+kill @e[type=marker,tag=frost_spread]
 
-# Final burst of particles
-execute if score @s effect_timer matches 35 run particle minecraft:snowflake ~ ~1 ~ 5 3 5 0.08 60
-execute if score @s effect_timer matches 35 run particle minecraft:item_snowball ~ ~0.5 ~ 4 2 4 0.1 40
+# ============================================
+# RANDOM BLOCK 2
+# ============================================
+summon marker ~ ~ ~ {Tags:["frost_spread"]}
 
-# Kill marker after effect ends
-execute if score @s effect_timer matches 36.. run kill @s
+execute if score @s effect_timer matches 1..12 run spreadplayers ~ ~ 0 2 false @n[type=marker,tag=frost_spread]
+execute if score @s effect_timer matches 13..25 run spreadplayers ~ ~ 0 4 false @n[type=marker,tag=frost_spread]
+execute if score @s effect_timer matches 26..40 run spreadplayers ~ ~ 0 5 false @n[type=marker,tag=frost_spread]
+
+execute if score @s effect_timer matches 1..12 at @n[type=marker,tag=frost_spread] run setblock ~ ~ ~ snow
+execute if score @s effect_timer matches 13..25 at @n[type=marker,tag=frost_spread] run setblock ~ ~-1 ~ ice
+execute if score @s effect_timer matches 26..35 at @n[type=marker,tag=frost_spread] run setblock ~ ~-1 ~ packed_ice
+execute if score @s effect_timer matches 36..40 at @n[type=marker,tag=frost_spread] run setblock ~ ~-1 ~ blue_ice
+
+kill @e[type=marker,tag=frost_spread]
+
+# ============================================
+# RANDOM BLOCK 3 (extra density in later ticks)
+# ============================================
+execute if score @s effect_timer matches 10..40 run summon marker ~ ~ ~ {Tags:["frost_spread"]}
+
+execute if score @s effect_timer matches 10..20 run spreadplayers ~ ~ 0 3 false @n[type=marker,tag=frost_spread]
+execute if score @s effect_timer matches 21..40 run spreadplayers ~ ~ 0 5 false @n[type=marker,tag=frost_spread]
+
+execute if score @s effect_timer matches 10..20 at @n[type=marker,tag=frost_spread] run setblock ~ ~-1 ~ ice
+execute if score @s effect_timer matches 21..30 at @n[type=marker,tag=frost_spread] run setblock ~ ~-1 ~ packed_ice
+execute if score @s effect_timer matches 31..40 at @n[type=marker,tag=frost_spread] run setblock ~ ~-1 ~ blue_ice
+
+execute if score @s effect_timer matches 10..40 run kill @e[type=marker,tag=frost_spread]
+
+# --- Sounds at key moments ---
+execute if score @s effect_timer matches 1 run playsound minecraft:block.glass.break master @a ~ ~ ~ 1 1.5
+execute if score @s effect_timer matches 12 run playsound minecraft:block.glass.break master @a ~ ~ ~ 0.8 1.8
+execute if score @s effect_timer matches 25 run playsound minecraft:block.glass.break master @a ~ ~ ~ 0.6 2.0
+execute if score @s effect_timer matches 35 run playsound minecraft:block.powder_snow.step master @a ~ ~ ~ 1 0.5
+
+# --- Final burst ---
+execute if score @s effect_timer matches 40 run particle minecraft:snowflake ~ ~1 ~ 6 3 6 0.1 80
+execute if score @s effect_timer matches 40 run particle minecraft:item_snowball ~ ~0.5 ~ 5 2 5 0.1 50
+
+# Kill marker
+execute if score @s effect_timer matches 41.. run kill @s
