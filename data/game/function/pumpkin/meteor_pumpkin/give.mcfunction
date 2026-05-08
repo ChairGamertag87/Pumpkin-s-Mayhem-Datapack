@@ -1,0 +1,1 @@
+give @p warped_fungus_on_a_stick[custom_name={"bold":true,"color":"#9b30ff","italic":false,"text":"Meteor Pumpkin"},lore=[{"color":"#9b30ff","text":"A pumpkin that rains meteors around it.","italic":false}],custom_data={metpumpkin:1b},enchantment_glint_override=true] 1

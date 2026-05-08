@@ -1,0 +1,1 @@
+give @p warped_fungus_on_a_stick[custom_name={"bold":true,"color":"dark_purple","italic":false,"text":"Darkness Pumpkin"},lore=[{"color":"dark_purple","text":"A pumpkin that blinds nearby players.","italic":false}],custom_data={darkpumpkin:1b},enchantment_glint_override=true] 1

@@ -1,0 +1,1 @@
+give @p warped_fungus_on_a_stick[custom_name={"bold":true,"color":"white","italic":false,"text":"Protection Pumpkin"},lore=[{"color":"white","text":"A pumpkin that creates a protection zone against arrows.","italic":false}],custom_data={protpumpkin:1b},enchantment_glint_override=true] 1

@@ -1,0 +1,1 @@
+give @p warped_fungus_on_a_stick[custom_name={"bold":true,"color":"#ff6600","italic":false,"text":"Incendiary Pumpkin"},lore=[{"color":"#ff6600","text":"A pumpkin that explodes and ignites nearby players.","italic":false}],custom_data={incpumpkin:1b},enchantment_glint_override=true] 1

@@ -1,0 +1,1 @@
+give @p warped_fungus_on_a_stick[custom_name={"bold":true,"color":"dark_green","italic":false,"text":"Zombie Pumpkin"},lore=[{"color":"dark_green","text":"A pumpkin with babies that attack nearby players.","italic":false}],custom_data={zombpumpkin:1b},enchantment_glint_override=true] 1

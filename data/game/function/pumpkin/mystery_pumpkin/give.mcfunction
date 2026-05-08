@@ -1,0 +1,1 @@
+give @p warped_fungus_on_a_stick[custom_name={"bold":true,"color":"gold","italic":false,"text":"Mystery Pumpkin"},lore=[{"color":"gold","text":"A pumpkin that spawns a random pumpkin, good luck!","italic":false}],custom_data={mystpumpkin:1b},enchantment_glint_override=true] 1

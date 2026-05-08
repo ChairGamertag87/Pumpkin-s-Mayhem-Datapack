@@ -1,0 +1,1 @@
+give @p warped_fungus_on_a_stick[custom_name={"bold":true,"color":"#d580ff","italic":false,"text":"Levitation Pumpkin"},lore=[{"color":"#d580ff","text":"A pumpkin that makes nearby players levitate.","italic":false}],custom_data={levpumpkin:1b},enchantment_glint_override=true] 1

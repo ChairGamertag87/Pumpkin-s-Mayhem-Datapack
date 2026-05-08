@@ -1,0 +1,1 @@
+give @p warped_fungus_on_a_stick[custom_name={"bold":true,"color":"#8b4513","italic":false,"text":"Fragmentation Pumpkin"},lore=[{"color":"#8b4513","text":"A pumpkin that expels mini explosive pumpkins.","italic":false}],custom_data={fragpumpkin:1b},enchantment_glint_override=true] 1

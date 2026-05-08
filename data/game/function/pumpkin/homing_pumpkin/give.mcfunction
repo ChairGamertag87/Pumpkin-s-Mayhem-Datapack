@@ -1,0 +1,1 @@
+give @p warped_fungus_on_a_stick[custom_name={"bold":true,"color":"red","italic":false,"text":"Homing Pumpkin"},lore=[{"color":"red","text":"A pumpkin that chases a player and explodes shortly after.","italic":false}],custom_data={hompumpkin:1b},enchantment_glint_override=true] 1

@@ -7,3 +7,17 @@ function game:pumpkin/thunder_pumpkin/give
 function game:pumpkin/bridging_pumpkin/give
 function game:pumpkin/healing_pumpkin/give
 function game:pumpkin/stinky_pumpkin/give
+function game:pumpkin/warden_pumpkin/give
+function game:pumpkin/mystery_pumpkin/give
+function game:pumpkin/protection_pumpkin/give
+function game:pumpkin/homing_pumpkin/give
+function game:pumpkin/blackhole_pumpkin/give
+function game:pumpkin/darkness_pumpkin/give
+function game:pumpkin/fragmentation_pumpkin/give
+function game:pumpkin/incendiary_pumpkin/give
+function game:pumpkin/meteor_pumpkin/give
+function game:pumpkin/levitation_pumpkin/give
+function game:pumpkin/zombie_pumpkin/give
+function game:pumpkin/giant_pumpkin/give
+function game:pumpkin/frost_pumpkin/give
+function game:pumpkin/glutton_pumpkin/give

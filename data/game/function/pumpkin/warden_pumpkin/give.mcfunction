@@ -1,0 +1,1 @@
+give @p warped_fungus_on_a_stick[custom_name={"bold":true,"color":"dark_aqua","italic":false,"text":"Warden Pumpkin"},lore=[{"color":"dark_aqua","text":"A pumpkin that creates a corrupted zone around it.","italic":false}],custom_data={wardpumpkin:1b},enchantment_glint_override=true] 1

@@ -11,7 +11,7 @@ execute store result entity @n[type=minecraft:armor_stand, tag=temp_snowball_pum
 execute store result entity @n[type=minecraft:armor_stand, tag=temp_snowball_pumpkin] Motion[1] double 0.0001 run scoreboard players get .y maths
 execute store result entity @n[type=minecraft:armor_stand, tag=temp_snowball_pumpkin] Motion[2] double 0.0001 run scoreboard players get .z maths
 
-summon minecraft:item_display ^ ^1 ^1 {Tags:["pumpkin"],NoGravity:1b,billboard:"fixed",item_display:"fixed",interpolation_duration:5,interpolation_delay:0,teleport_duration:0,transformation:{scale:[0.5f,0.5f,0.5f]},item:{id:"minecraft:pumpkin",Count:1b}}
+summon minecraft:item_display ^ ^1 ^1 {Tags:["pumpkin"],NoGravity:1b,billboard:"fixed",item_display:"fixed",interpolation_duration:5,interpolation_delay:0,teleport_duration:0,transformation:{scale:[0.5f,0.5f,0.5f]},item:{id:"minecraft:pumpkin",count:1}}
 
 execute as @e[type=minecraft:armor_stand,tag=temp_snowball_pumpkin,sort=nearest,limit=1] at @s run ride @e[type=item_display,tag=pumpkin,sort=nearest,limit=1] mount @s
 ride @s mount @e[type=item_display,tag=pumpkin,sort=nearest,limit=1]

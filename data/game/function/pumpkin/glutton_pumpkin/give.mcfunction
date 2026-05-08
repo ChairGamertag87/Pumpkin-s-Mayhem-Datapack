@@ -1,0 +1,1 @@
+give @p warped_fungus_on_a_stick[custom_name={"bold":true,"color":"#daa520","italic":false,"text":"Glutton Pumpkin"},lore=[{"color":"#daa520","text":"A pumpkin that swallows everything in its path.","italic":false}],custom_data={glutpumpkin:1b},enchantment_glint_override=true] 1

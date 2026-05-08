@@ -1,0 +1,1 @@
+give @p warped_fungus_on_a_stick[custom_name={"bold":true,"color":"#1a1a2e","italic":false,"text":"Black Hole Pumpkin"},lore=[{"color":"#1a1a2e","text":"A pumpkin that attracts and absorbs nearby blocks and players.","italic":false}],custom_data={bholepumpkin:1b},enchantment_glint_override=true] 1

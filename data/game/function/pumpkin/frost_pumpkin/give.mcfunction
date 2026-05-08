@@ -1,0 +1,1 @@
+give @p warped_fungus_on_a_stick[custom_name={"bold":true,"color":"aqua","italic":false,"text":"Frost Pumpkin"},lore=[{"color":"aqua","text":"A pumpkin that freezes and slows nearby players.","italic":false}],custom_data={frostpumpkin:1b},enchantment_glint_override=true] 1

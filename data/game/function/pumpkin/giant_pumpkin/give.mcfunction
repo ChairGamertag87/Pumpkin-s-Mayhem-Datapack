@@ -1,0 +1,1 @@
+give @p warped_fungus_on_a_stick[custom_name={"bold":true,"color":"gray","italic":false,"text":"Giant Pumpkin"},lore=[{"color":"gray","text":"A truly giant pumpkin that breaks everything!","italic":false}],custom_data={giantpumpkin:1b},enchantment_glint_override=true] 1
