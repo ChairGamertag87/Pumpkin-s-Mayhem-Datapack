@@ -34,25 +34,18 @@ execute if entity @s[tag=levpumpkin] run particle minecraft:portal ~ ~0.5 ~ 1 1 
 execute if entity @s[tag=levpumpkin] run playsound minecraft:entity.shulker.shoot master @a ~ ~ ~ 1 1
 execute if entity @s[tag=levpumpkin] run playsound minecraft:block.beacon.activate master @a ~ ~ ~ 0.5 2
 
-#--- Frost Pumpkin ---
+#--- Frost Pumpkin (progressive via marker) ---
 execute if entity @s[tag=frostpumpkin] run effect give @a[distance=..5] slowness 5 2
 execute if entity @s[tag=frostpumpkin] run effect give @a[distance=..5] mining_fatigue 5 1
-execute if entity @s[tag=frostpumpkin] run particle minecraft:snowflake ~ ~1 ~ 3 2 3 0.05 80
-execute if entity @s[tag=frostpumpkin] run particle minecraft:cloud ~ ~0.5 ~ 2 1 2 0.02 50
-execute if entity @s[tag=frostpumpkin] run particle minecraft:item_snowball ~ ~0.5 ~ 2 1 2 0.1 40
+execute if entity @s[tag=frostpumpkin] run summon marker ~ ~ ~ {Tags:["frost_effect"]}
+execute if entity @s[tag=frostpumpkin] run scoreboard players set @n[type=marker,tag=frost_effect] effect_timer 0
 execute if entity @s[tag=frostpumpkin] run playsound minecraft:block.glass.break master @a ~ ~ ~ 1 1.5
-execute if entity @s[tag=frostpumpkin] run playsound minecraft:block.powder_snow.step master @a ~ ~ ~ 1 0.5
-execute if entity @s[tag=frostpumpkin] run fill ~-2 ~ ~-2 ~2 ~ ~2 snow replace air
 
-#--- Incendiary Pumpkin ---
+#--- Incendiary Pumpkin (progressive via marker) ---
 execute if entity @s[tag=incpumpkin] run summon tnt ~ ~ ~
-execute if entity @s[tag=incpumpkin] run fill ~-3 ~ ~-3 ~3 ~1 ~3 fire replace air
-execute if entity @s[tag=incpumpkin] run particle minecraft:flame ~ ~1 ~ 3 2 3 0.1 80
-execute if entity @s[tag=incpumpkin] run particle minecraft:lava ~ ~0.5 ~ 2 1 2 0.5 30
-execute if entity @s[tag=incpumpkin] run particle minecraft:large_smoke ~ ~1.5 ~ 2 1 2 0.05 50
-execute if entity @s[tag=incpumpkin] run particle minecraft:soul_fire_flame ~ ~0.5 ~ 2 1 2 0.05 30
+execute if entity @s[tag=incpumpkin] run summon marker ~ ~ ~ {Tags:["fire_effect"]}
+execute if entity @s[tag=incpumpkin] run scoreboard players set @n[type=marker,tag=fire_effect] effect_timer 0
 execute if entity @s[tag=incpumpkin] run playsound minecraft:item.firecharge.use master @a ~ ~ ~ 1 1
-execute if entity @s[tag=incpumpkin] run playsound minecraft:entity.blaze.shoot master @a ~ ~ ~ 0.8 0.5
 
 #--- Stinky Pumpkin ---
 execute if entity @s[tag=spumpkin] run effect give @a[distance=..4] poison 5 0

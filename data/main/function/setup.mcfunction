@@ -9,6 +9,7 @@ scoreboard objectives add lastZ dummy
 scoreboard objectives add currentX dummy
 scoreboard objectives add currentY dummy
 scoreboard objectives add currentZ dummy
+scoreboard objectives add effect_timer dummy
 
 #Setup players
 scoreboard players set .x maths 0
