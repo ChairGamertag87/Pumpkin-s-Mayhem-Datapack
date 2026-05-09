@@ -10,3 +10,7 @@ execute as @e[type=marker,tag=dark_effect] at @s run function game:pumpkin/darkn
 execute as @e[type=marker,tag=lev_effect] at @s run function game:pumpkin/levitation_pumpkin/lev_tick
 execute as @e[type=marker,tag=stink_effect] at @s run function game:pumpkin/stinky_pumpkin/stink_tick
 execute as @e[type=marker,tag=heal_effect] at @s run function game:pumpkin/healing_pumpkin/heal_tick
+execute as @e[type=marker,tag=quake_effect] at @s run function game:pumpkin/earthquake_pumpkin/quake_tick
+execute as @e[type=marker,tag=prot_effect] at @s run function game:pumpkin/protection_pumpkin/prot_tick
+execute as @e[type=marker,tag=glut_effect] at @s run function game:pumpkin/glutton_pumpkin/glut_tick
+execute as @e[type=marker,tag=warden_effect] at @s run function game:pumpkin/warden_pumpkin/warden_tick
