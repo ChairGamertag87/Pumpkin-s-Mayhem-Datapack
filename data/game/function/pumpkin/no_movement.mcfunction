@@ -24,4 +24,4 @@ execute if entity @s[tag=giantpumpkin] run function game:pumpkin/giant_pumpkin/i
 execute if entity @s[tag=glutpumpkin] run function game:pumpkin/glutton_pumpkin/impact
 
 kill @s
-kill @e[type=item_display, tag=pumpkin, tag=!hpumpkin, distance=..1]
+kill @e[type=item_display, tag=pumpkin, distance=..1]
