@@ -6,3 +6,7 @@ execute as @e[type=minecraft:armor_stand,tag=brpumpkin] at @e[type=minecraft:arm
 
 execute as @e[type=marker,tag=frost_effect] at @s run function game:pumpkin/frost_pumpkin/frost_tick
 execute as @e[type=marker,tag=fire_effect] at @s run function game:pumpkin/incendiary_pumpkin/fire_tick
+execute as @e[type=marker,tag=dark_effect] at @s run function game:pumpkin/darkness_pumpkin/dark_tick
+execute as @e[type=marker,tag=lev_effect] at @s run function game:pumpkin/levitation_pumpkin/lev_tick
+execute as @e[type=marker,tag=stink_effect] at @s run function game:pumpkin/stinky_pumpkin/stink_tick
+execute as @e[type=marker,tag=heal_effect] at @s run function game:pumpkin/healing_pumpkin/heal_tick
